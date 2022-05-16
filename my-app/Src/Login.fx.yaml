@@ -1,0 +1,63 @@
+Login As screen:
+
+    Label1 As label:
+        Height: =62
+        Size: =21
+        Text: ="User Name"
+        Width: =207
+        X: =52
+        Y: =562
+        ZIndex: =1
+
+    Label2 As label:
+        Height: =72
+        Size: =21
+        Text: ="Password"
+        Width: =207
+        X: =52
+        Y: =649
+        ZIndex: =2
+
+    txtUserName As text:
+        Default: =""
+        Height: =70
+        Size: =21
+        Width: =381
+        X: =241
+        Y: =562
+        ZIndex: =3
+
+    txtPassword As text:
+        Default: =""
+        Height: =70
+        Mode: =TextMode.Password
+        Size: =21
+        Width: =381
+        X: =241
+        Y: =649
+        ZIndex: =4
+
+    Button1 As button:
+        Height: =70
+        OnSelect: |-
+            =If(
+                !IsBlank(       
+                    LookUp(
+                        UserData,
+                        UserName = txtUserName.Text And Password=txtPassword.Text
+                    );
+                ),
+            Navigate(Operations, ScreenTransition.Fade),
+            Notify(
+            "Invalid Login Details",
+            NotificationType.Error
+            ));
+            
+            Set(LoginUserName,txtUserName.Text);
+        Size: =24
+        Text: ="Login"
+        Width: =280
+        X: =188
+        Y: =796
+        ZIndex: =5
+

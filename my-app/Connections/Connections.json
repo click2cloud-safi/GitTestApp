@@ -1,0 +1,68 @@
+{
+  "1928c9ca-c579-496b-b2ac-7872e147836d": {
+    "connectionParameters": {
+      "database": "Lufthansa",
+      "server": "192.168.1.218"
+    },
+    "connectionRef": {
+      "apiTier": "Premium",
+      "authenticationType": "sqlAuthentication",
+      "displayName": "SQL Server",
+      "gatewayObjectIdHint": "3aaacd61-0237-4fae-8033-faa73baa8e6f",
+      "iconUri": "https://connectoricons-prod.azureedge.net/non_zr_connectors/1.0.1575.2789/sql/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sql",
+      "isOnPremiseConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_sql/connections/ebd41b3d5acf444b92a634273b6f16b1"
+    },
+    "datasets": {
+      "192.168.1.218,Lufthansa": {
+        "dataSources": {
+          "UserData": {
+            "tableName": "[dbo].[UserData]"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "UserData"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "1928c9ca-c579-496b-b2ac-7872e147836d"
+  },
+  "ba21c003-841f-406e-9948-93cef59089e2": {
+    "connectionParameters": {
+      "database": "Lufthansa",
+      "server": "192.168.1.218"
+    },
+    "connectionRef": {
+      "apiTier": "Premium",
+      "authenticationType": "sqlAuthentication",
+      "displayName": "SQL Server",
+      "gatewayObjectIdHint": "c4bf18c1-e953-44eb-9aa4-f4d234ddf2d4",
+      "iconUri": "https://connectoricons-prod.azureedge.net/non_zr_connectors/1.0.1575.2789/sql/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sql",
+      "isOnPremiseConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_sql/connections/097ffb9288a549f1b59b49e3eb2a165a"
+    },
+    "datasets": {
+      "192.168.1.218,Lufthansa": {
+        "dataSources": {
+          "UserInformation": {
+            "tableName": "[dbo].[UserInformation]"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "UserInformation"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ba21c003-841f-406e-9948-93cef59089e2"
+  }
+}
