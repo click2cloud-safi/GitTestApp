@@ -12,7 +12,7 @@ Login As screen:
     Label2 As label:
         Height: =72
         Size: =21
-        Text: ="Password"
+        Text: ="Passwords"
         Width: =207
         X: =52
         Y: =649
