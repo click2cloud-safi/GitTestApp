@@ -113,6 +113,7 @@ Operations As screen:
             Reset(txtCity);
             Reset(txtState);
             Reset(txtPin);
+            Set(options,"Updated Successfully");
             
         Size: =24
         Text: ="Update"
@@ -185,12 +186,12 @@ Operations As screen:
 
     Label3_4 As label:
         FontWeight: =FontWeight.Bold
-        Height: =58
+        Height: =60
         Size: =21
-        Text: ="Id"
-        Width: =104
+        Text: ="Emp Id"
+        Width: =119
         X: =22
-        Y: =779
+        Y: =777
         ZIndex: =14
 
     Label4 As label:
