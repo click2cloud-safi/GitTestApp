@@ -1,0 +1,270 @@
+Operations As screen:
+    OnVisible: =
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =569
+        Items: =UserInformation
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =77
+        ZIndex: =1
+
+        Image1 As image:
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.City
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image1.Width - 104
+            X: =Image1.X + Image1.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Insert As button:
+        DisplayMode: =
+        Height: =70
+        OnSelect: |
+            =Patch(UserInformation,Defaults(UserInformation), 
+            {Name: txtName.Text },
+            {City:txtCity.Text},
+            {State:txtState.Text},
+            {Pin:Value(txtPin.Text)},
+            {CreatedBy:txtCreatedBy.Text}
+            );
+            Reset(Gallery1);
+            Reset(txtId);
+            Reset(txtName);
+            Reset(txtCity);
+            Reset(txtState);
+            Reset(txtPin);
+        Size: =24
+        Text: ="Insert"
+        Width: =177
+        X: =235
+        Y: =1036
+        ZIndex: =2
+
+    Update As button:
+        Height: =70
+        OnSelect: |+
+            =UpdateIf(
+                UserInformation,
+                Id in txtId.Text,
+                {
+                    Name: txtName.Text,
+                    City: txtCity.Text,
+                    State: txtState.Text,
+                    Pin: Value(txtPin.Text),
+                    CreatedBy:txtCreatedBy.Text
+                }
+            );
+            Reset(Gallery1);
+            Reset(txtId);
+            Reset(txtName);
+            Reset(txtCity);
+            Reset(txtState);
+            Reset(txtPin);
+            
+        Size: =24
+        Text: ="Update"
+        Width: =174
+        X: =22
+        Y: =1036
+        ZIndex: =3
+
+    Delete As button:
+        Height: =70
+        OnSelect: |-
+            =RemoveIf(UserInformation,Id in txtId.Text);
+            Reset(Gallery1);
+            Reset(txtId);
+        Size: =24
+        Text: ="Delete"
+        Width: =175
+        X: =442
+        Y: =1036
+        ZIndex: =4
+
+    Label3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =58
+        Size: =21
+        Text: ="Name"
+        Width: =104
+        X: =25
+        Y: =856
+        ZIndex: =5
+
+    Label3_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =21
+        Text: ="City"
+        Width: =128
+        X: =320
+        Y: =861
+        ZIndex: =6
+
+    Label3_2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =58
+        Size: =21
+        Text: ="State"
+        Width: =104
+        X: =28
+        Y: =940
+        ZIndex: =7
+
+    Label3_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        Size: =21
+        Text: ="Pin"
+        Width: =119
+        X: =327
+        Y: =773
+        ZIndex: =8
+
+    txtId As text:
+        Default: =""
+        Height: =58
+        Size: =21
+        Width: =167
+        X: =147
+        Y: =773
+        ZIndex: =9
+
+    Label3_4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =58
+        Size: =21
+        Text: ="Id"
+        Width: =104
+        X: =22
+        Y: =779
+        ZIndex: =14
+
+    Label4 As label:
+        Height: =49
+        Size: =21
+        Text: ="Hi"
+        Width: =90
+        X: =322
+        Y: =5
+        ZIndex: =17
+
+    Label5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =55
+        Size: =30
+        Text: =LoginUserName
+        Width: =195
+        X: =392
+        Y: =5
+        ZIndex: =18
+
+    txtCreatedBy As text:
+        Default: =LoginUserName
+        DisplayMode: =DisplayMode.Disabled
+        Height: =66
+        Size: =21
+        Width: =144
+        X: =485
+        Y: =938
+        ZIndex: =19
+
+    txtName As text:
+        Default: =""
+        Height: =58
+        Size: =21
+        Width: =167
+        X: =147
+        Y: =856
+        ZIndex: =20
+
+    txtPin As text:
+        Default: =""
+        Height: =58
+        Size: =21
+        Width: =167
+        X: =463
+        Y: =777
+        ZIndex: =21
+
+    txtState As text:
+        Default: =""
+        Height: =58
+        Size: =21
+        Width: =167
+        X: =141
+        Y: =938
+        ZIndex: =22
+
+    txtCity As text:
+        Default: =""
+        Height: =58
+        Size: =21
+        Width: =167
+        X: =463
+        Y: =864
+        ZIndex: =23
+
+    Label3_5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =21
+        Text: ="Created By"
+        Width: =171
+        X: =314
+        Y: =938
+        ZIndex: =24
+
