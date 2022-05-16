@@ -50,7 +50,7 @@ Login As screen:
             Navigate(Operations, ScreenTransition.Fade),
             Notify(
             "Invalid Login Details success",
-            "HELL WORLD",
+            "HELLo WORLD",
             NotificationType.Error
             ));
             Set(LoginUserName,txtUserName.Text);
