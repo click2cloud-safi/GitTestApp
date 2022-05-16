@@ -113,6 +113,7 @@ Operations As screen:
             Reset(txtCity);
             Reset(txtState);
             Reset(txtPin);
+            Set(options,"Updated Successfully");
             
         Size: =24
         Text: ="Update"
