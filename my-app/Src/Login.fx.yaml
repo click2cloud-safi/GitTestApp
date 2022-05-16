@@ -12,7 +12,7 @@ Login As screen:
     Label2 As label:
         Height: =72
         Size: =21
-        Text: ="Passwords"
+        Text: ="Password"
         Width: =207
         X: =52
         Y: =649
@@ -49,10 +49,9 @@ Login As screen:
                 ),
             Navigate(Operations, ScreenTransition.Fade),
             Notify(
-            "Invalid Login Details, Please try again later",
+            "Invalid Login Details. Check credentials",
             NotificationType.Error
             ));
-            
             Set(LoginUserName,txtUserName.Text);
         Size: =24
         Text: ="Login"
