@@ -49,7 +49,7 @@ Login As screen:
                 ),
             Navigate(Operations, ScreenTransition.Fade),
             Notify(
-            "Invalid Login Details please try again.",
+            "Invalid Login Details",
             NotificationType.Error
             ));
             
