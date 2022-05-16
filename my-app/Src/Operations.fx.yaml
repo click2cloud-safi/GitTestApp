@@ -77,7 +77,7 @@ Operations As screen:
             {Name: txtName.Text },
             {City:txtCity.Text},
             {State:txtState.Text},
-            {Pin:Value(txtPin.Text)},
+            {Pin:Value(txtPincode.Text)},
             {CreatedBy:txtCreatedBy.Text}
             );
             Reset(Gallery1);
@@ -85,7 +85,7 @@ Operations As screen:
             Reset(txtName);
             Reset(txtCity);
             Reset(txtState);
-            Reset(txtPin);
+            Reset(txtPincode);
         Size: =24
         Text: ="Insert"
         Width: =177
@@ -103,7 +103,7 @@ Operations As screen:
                     Name: txtName.Text,
                     City: txtCity.Text,
                     State: txtState.Text,
-                    Pin: Value(txtPin.Text),
+                    Pin: Value(txtPincode.Text),
                     CreatedBy:txtCreatedBy.Text
                 }
             );
@@ -112,11 +112,11 @@ Operations As screen:
             Reset(txtName);
             Reset(txtCity);
             Reset(txtState);
-            Reset(txtPin);
-            Set(options,"Updated Successfully");
+            Reset(txtPincode);
+            
             
         Size: =24
-        Text: ="Update"
+        Text: ="Update  Data"
         Width: =174
         X: =22
         Y: =1036
@@ -232,7 +232,7 @@ Operations As screen:
         Y: =856
         ZIndex: =20
 
-    txtPin As text:
+    txtPincode As text:
         Default: =""
         Height: =58
         Size: =21

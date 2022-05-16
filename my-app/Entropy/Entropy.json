@@ -29,13 +29,13 @@
     "txtId": 19,
     "txtName": 24,
     "txtPassword": 7,
-    "txtPin": 21,
+    "txtPincode": 21,
     "txtState": 27,
     "txtUserName": 5,
     "Update": 31
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/16/2022 13:26:57",
+  "HeaderLastSavedDateTimeUTC": "05/16/2022 13:34:01",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1928c9ca-c579-496b-b2ac-7872e147836d": "\"/providers/microsoft.powerapps/apis/shared_sql/connections/ebd41b3d5acf444b92a634273b6f16b1\"",
@@ -92,7 +92,7 @@
     "txtId": 14,
     "txtName": 19,
     "txtPassword": 3,
-    "txtPin": 16,
+    "txtPincode": 16,
     "txtState": 22,
     "txtUserName": 1,
     "Update": 26
