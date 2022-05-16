@@ -49,7 +49,7 @@ Login As screen:
                 ),
             Navigate(Operations, ScreenTransition.Fade),
             Notify(
-            "Invalid Login Details. Check credentials",
+            "Invalid Login Details.",
             NotificationType.Error
             ));
             Set(LoginUserName,txtUserName.Text);
