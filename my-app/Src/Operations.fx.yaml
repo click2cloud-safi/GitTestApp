@@ -109,7 +109,7 @@ Operations As screen:
             );
             Reset(Gallery1);
             Reset(txtId);
-            Reset(txtName);
+            Reset(txtNamesurname);
             Reset(txtCity);
             Reset(txtState);
             Reset(txtPin);
