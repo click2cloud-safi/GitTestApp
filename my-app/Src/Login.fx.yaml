@@ -49,8 +49,7 @@ Login As screen:
                 ),
             Navigate(Operations, ScreenTransition.Fade),
             Notify(
-            "Invalid Login Details success",
-            "HELLo WORLD",
+            "Invalid Login Details. Check credentials",
             NotificationType.Error
             ));
             Set(LoginUserName,txtUserName.Text);
